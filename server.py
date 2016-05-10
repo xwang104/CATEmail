@@ -13,7 +13,7 @@ EXTERNAL_IP = '104.155.193.244'
 clientID = '961180585767-43l499eej0riiqljcla75psc39cavghj.apps.googleusercontent.com'
 clientSecret = "TMLV_8rYxLV0vV77U-dD8vxs"
 redirectURI = 'http://www.catemail.tk/oauth2callback'
-gmailScope = 'https://www.googleapis.com/auth/gmail'
+gmailScope = 'https://www.googleapis.com/auth/gmail.readonly'
 
 class CATEmail(object):
   @cherrypy.expose
@@ -33,29 +33,34 @@ class CATEmail(object):
     http = credentials.authorize(http)
     gmail = build('gmail', 'v1', http=http)
     userId = 'me'
-    maxResults = 100
-    q = "category:promotions"
+    maxResults = 10
+    q = "category:promotions after:2016/05/07"
     response = gmail.users().messages().list(userId = userId, 
-                                             mexResults = maxResults,
                                              q = q).execute()
     
+    print ('first query executed')
+    cnt = 0
     messages = []
     if 'messages' in response:
       messages.extend(response['messages'])
 
     while 'nextPageToken' in response:
       pageToken = response['nextPageToken']
-      response = service.users().messages().list(userId=userId, 
+      response = gmail.users().messages().list(userId=userId, 
                               q=q,
                               pageToken=pageToken).execute()
       messages.extend(response['messages'])
 
 
-    for message in messages:
+    for meta in messages:
+      print (meta)
+      message = gmail.users().messages().get(userId = userId, 
+                                             id = meta['id']).execute()
+
       headers = message['payload']['headers']
-      print (len(headers))
-      if len(headers) > 0:
-        print headers[0]['Subject']
+      for header in headers:
+        if header['name'] == 'Subject':
+          print header['value']
     return 'OK'
 
     """

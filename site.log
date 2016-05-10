@@ -409,3 +409,201 @@ TypeError: <RequestsCookieJar[]> is not JSON serializable
 [10/May/2016:02:27:18] ENGINE Bus EXITING
 [10/May/2016:02:27:18] ENGINE Bus EXITED
 [10/May/2016:02:27:18] ENGINE Waiting for child threads to terminate...
+[10/May/2016:02:29:18] ENGINE Listening for SIGHUP.
+[10/May/2016:02:29:18] ENGINE Listening for SIGTERM.
+[10/May/2016:02:29:18] ENGINE Listening for SIGUSR1.
+[10/May/2016:02:29:18] ENGINE Bus STARTING
+[10/May/2016:02:29:18] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:02:29:18] ENGINE Serving on http://10.140.0.2
+[10/May/2016:02:29:18] ENGINE Bus STARTED
+[10/May/2016:02:29:32] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 31, in oauth2callback
+    credentials = flow.step2_exchange(code)
+  File "/usr/local/lib/python2.7/dist-packages/oauth2client/util.py", line 135, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/oauth2client/client.py", line 2135, in step2_exchange
+    raise FlowExchangeError(error_msg)
+FlowExchangeError: invalid_scopeSome requested scopes were invalid. {invalid=[https://www.googleapis.com/auth/gmail]}
+[10/May/2016:02:31:24] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:02:31:24] ENGINE Bus STOPPING
+[10/May/2016:02:31:24] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.2', 80)) shut down
+[10/May/2016:02:31:24] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:02:31:24] ENGINE Bus STOPPED
+[10/May/2016:02:31:24] ENGINE Bus EXITING
+[10/May/2016:02:31:24] ENGINE Bus EXITED
+[10/May/2016:02:31:24] ENGINE Waiting for child threads to terminate...
+[10/May/2016:02:31:25] ENGINE Listening for SIGHUP.
+[10/May/2016:02:31:25] ENGINE Listening for SIGTERM.
+[10/May/2016:02:31:25] ENGINE Listening for SIGUSR1.
+[10/May/2016:02:31:25] ENGINE Bus STARTING
+[10/May/2016:02:31:25] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:02:31:26] ENGINE Serving on http://10.140.0.2
+[10/May/2016:02:31:26] ENGINE Bus STARTED
+[10/May/2016:02:31:38] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 40, in oauth2callback
+    q = q).execute()
+  File "/usr/local/lib/python2.7/dist-packages/googleapiclient/discovery.py", line 676, in method
+    raise TypeError('Got an unexpected keyword argument "%s"' % name)
+TypeError: Got an unexpected keyword argument "mexResults"
+[10/May/2016:02:32:02] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:02:32:02] ENGINE Bus STOPPING
+[10/May/2016:02:32:02] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.2', 80)) shut down
+[10/May/2016:02:32:02] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:02:32:02] ENGINE Bus STOPPED
+[10/May/2016:02:32:02] ENGINE Bus EXITING
+[10/May/2016:02:32:02] ENGINE Bus EXITED
+[10/May/2016:02:32:02] ENGINE Waiting for child threads to terminate...
+[10/May/2016:02:32:03] ENGINE Listening for SIGHUP.
+[10/May/2016:02:32:03] ENGINE Listening for SIGTERM.
+[10/May/2016:02:32:03] ENGINE Listening for SIGUSR1.
+[10/May/2016:02:32:03] ENGINE Bus STARTING
+[10/May/2016:02:32:03] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:02:32:04] ENGINE Serving on http://10.140.0.2
+[10/May/2016:02:32:04] ENGINE Bus STARTED
+[10/May/2016:02:32:16] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 48, in oauth2callback
+    response = service.users().messages().list(userId=userId,
+NameError: global name 'service' is not defined
+[10/May/2016:02:32:43] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:02:32:43] ENGINE Bus STOPPING
+[10/May/2016:02:32:43] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.2', 80)) shut down
+[10/May/2016:02:32:43] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:02:32:43] ENGINE Bus STOPPED
+[10/May/2016:02:32:43] ENGINE Bus EXITING
+[10/May/2016:02:32:43] ENGINE Bus EXITED
+[10/May/2016:02:32:43] ENGINE Waiting for child threads to terminate...
+[10/May/2016:02:32:44] ENGINE Listening for SIGHUP.
+[10/May/2016:02:32:44] ENGINE Listening for SIGTERM.
+[10/May/2016:02:32:44] ENGINE Listening for SIGUSR1.
+[10/May/2016:02:32:44] ENGINE Bus STARTING
+[10/May/2016:02:32:44] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:02:32:44] ENGINE Serving on http://10.140.0.2
+[10/May/2016:02:32:44] ENGINE Bus STARTED
+[10/May/2016:02:33:44] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 55, in oauth2callback
+    headers = message['payload']['headers']
+KeyError: 'payload'
+[10/May/2016:02:35:41] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:02:35:41] ENGINE Bus STOPPING
+[10/May/2016:02:35:41] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.2', 80)) shut down
+[10/May/2016:02:35:41] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:02:35:41] ENGINE Bus STOPPED
+[10/May/2016:02:35:41] ENGINE Bus EXITING
+[10/May/2016:02:35:41] ENGINE Bus EXITED
+[10/May/2016:02:35:41] ENGINE Waiting for child threads to terminate...
+[10/May/2016:02:35:43] ENGINE Listening for SIGHUP.
+[10/May/2016:02:35:43] ENGINE Listening for SIGTERM.
+[10/May/2016:02:35:43] ENGINE Listening for SIGUSR1.
+[10/May/2016:02:35:43] ENGINE Bus STARTING
+[10/May/2016:02:35:43] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:02:35:43] ENGINE Serving on http://10.140.0.2
+[10/May/2016:02:35:43] ENGINE Bus STARTED
+[10/May/2016:02:40:05] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:02:40:05] ENGINE Bus STOPPING
+[10/May/2016:02:40:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.2', 80)) shut down
+[10/May/2016:02:40:05] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:02:40:05] ENGINE Bus STOPPED
+[10/May/2016:02:40:05] ENGINE Bus EXITING
+[10/May/2016:02:40:05] ENGINE Bus EXITED
+[10/May/2016:02:40:05] ENGINE Waiting for child threads to terminate...
+[10/May/2016:02:40:16] ENGINE Listening for SIGHUP.
+[10/May/2016:02:40:16] ENGINE Listening for SIGTERM.
+[10/May/2016:02:40:16] ENGINE Listening for SIGUSR1.
+[10/May/2016:02:40:16] ENGINE Bus STARTING
+[10/May/2016:02:40:16] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:02:40:16] ENGINE Serving on http://10.140.0.2
+[10/May/2016:02:40:16] ENGINE Bus STARTED
+[10/May/2016:02:41:14] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 64, in oauth2callback
+    print headers[0]['Subject']
+KeyError: 'Subject'
+[10/May/2016:02:44:28] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:02:44:28] ENGINE Bus STOPPING
+[10/May/2016:02:44:28] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.2', 80)) shut down
+[10/May/2016:02:44:28] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:02:44:28] ENGINE Bus STOPPED
+[10/May/2016:02:44:28] ENGINE Bus EXITING
+[10/May/2016:02:44:28] ENGINE Bus EXITED
+[10/May/2016:02:44:28] ENGINE Waiting for child threads to terminate...
+[10/May/2016:02:44:29] ENGINE Listening for SIGHUP.
+[10/May/2016:02:44:29] ENGINE Listening for SIGTERM.
+[10/May/2016:02:44:29] ENGINE Listening for SIGUSR1.
+[10/May/2016:02:44:29] ENGINE Bus STARTING
+[10/May/2016:02:44:29] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:02:44:30] ENGINE Serving on http://10.140.0.2
+[10/May/2016:02:44:30] ENGINE Bus STARTED
+[10/May/2016:02:49:44] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:02:49:44] ENGINE Bus STOPPING
+[10/May/2016:02:52:49] ENGINE Listening for SIGHUP.
+[10/May/2016:02:52:49] ENGINE Listening for SIGTERM.
+[10/May/2016:02:52:49] ENGINE Listening for SIGUSR1.
+[10/May/2016:02:52:49] ENGINE Bus STARTING
+[10/May/2016:02:52:49] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:02:52:49] ENGINE Serving on http://10.140.0.2
+[10/May/2016:02:52:49] ENGINE Bus STARTED
+[10/May/2016:02:52:52] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 31, in oauth2callback
+    credentials = flow.step2_exchange(code)
+  File "/usr/local/lib/python2.7/dist-packages/oauth2client/util.py", line 135, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/oauth2client/client.py", line 2135, in step2_exchange
+    raise FlowExchangeError(error_msg)
+FlowExchangeError: invalid_grantCode was already redeemed.
+[10/May/2016:02:53:47] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:02:53:47] ENGINE Bus STOPPING
+[10/May/2016:02:53:48] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.2', 80)) shut down
+[10/May/2016:02:53:48] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:02:53:48] ENGINE Bus STOPPED
+[10/May/2016:02:53:48] ENGINE Bus EXITING
+[10/May/2016:02:53:48] ENGINE Bus EXITED
+[10/May/2016:02:53:48] ENGINE Waiting for child threads to terminate...
+[10/May/2016:02:53:48] ENGINE Waiting for thread CP Server Thread-5.
+[10/May/2016:02:54:51] ENGINE Listening for SIGHUP.
+[10/May/2016:02:54:51] ENGINE Listening for SIGTERM.
+[10/May/2016:02:54:51] ENGINE Listening for SIGUSR1.
+[10/May/2016:02:54:51] ENGINE Bus STARTING
+[10/May/2016:02:54:51] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:02:54:51] ENGINE Serving on http://10.140.0.2
+[10/May/2016:02:54:51] ENGINE Bus STARTED
