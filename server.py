@@ -6,6 +6,7 @@ import json
 from apiclient.discovery import build
 from oauth2client.client import OAuth2WebServerFlow
 import httplib2
+from threading import Thread
 
 INTERNAL_IP = '10.140.0.2'
 EXTERNAL_IP = '104.155.193.244'
@@ -20,18 +21,8 @@ class CATEmail(object):
   def index(self):
     return file('html/index.html')
 
-  @cherrypy.expose
-  def oauth2callback(self, code = None):
-    flow = OAuth2WebServerFlow(client_id=clientID,
-                               client_secret=clientSecret,
-                               scope=gmailScope,
-                               redirect_uri=redirectURI)
-
-    #auth_uri = flow.step1_get_authorize_url()
-    credentials = flow.step2_exchange(code)
-    http = httplib2.Http()
-    http = credentials.authorize(http)
-    gmail = build('gmail', 'v1', http=http)
+  def analyze(self, gmail, email):
+    # create a new thread, pass the code to new thread
     userId = 'me'
     maxResults = 10
     q = "category:promotions after:2016/05/07"
@@ -61,8 +52,37 @@ class CATEmail(object):
       for header in headers:
         if header['name'] == 'Subject':
           print header['value']
+
+
     return 'OK'
 
+
+    return ""
+
+  @cherrypy.expose
+  def category(self, cate = None):
+    # process cate
+    return ""
+
+  @cherrypy.expose
+  def oauth2callback(self, code = None):
+    flow = OAuth2WebServerFlow(client_id=clientID,
+                               client_secret=clientSecret,
+                               scope=gmailScope,
+                               redirect_uri=redirectURI)
+
+    #auth_uri = flow.step1_get_authorize_url()
+    credentials = flow.step2_exchange(code)
+    http = httplib2.Http()
+    http = credentials.authorize(http)
+    gmail = build('gmail', 'v1', http=http)
+    profile = gmail.users().getProfile(userId='me')
+    email = profile['emailAddress']
+
+    # check db if the thread for this email address has been created
+    # if not, create a new one
+    thread = Thread(target = self.analzye, args = (gmail, email, ))
+    return 'OK'
     """
     data = {'code': code,
             'client_id': clientID,
@@ -75,13 +95,6 @@ class CATEmail(object):
     print res.content
     return 'OK: ' + urlencode(data).encode() 
     """
-
-  @cherrypy.expose
-  @cherrypy.tools.json_out()
-  @cherrypy.tools.json_in()
-  def token(self):
-    print cherrypy.request.json
-    return {'status': 'OK'}
 
 if __name__ == '__main__':
   current_dir = os.path.dirname(os.path.abspath(__file__))

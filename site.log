@@ -607,3 +607,37 @@ FlowExchangeError: invalid_grantCode was already redeemed.
 [10/May/2016:02:54:51] ENGINE Started monitor thread '_TimeoutMonitor'.
 [10/May/2016:02:54:51] ENGINE Serving on http://10.140.0.2
 [10/May/2016:02:54:51] ENGINE Bus STARTED
+[10/May/2016:03:54:53] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:03:54:53] ENGINE Bus STOPPING
+[10/May/2016:03:54:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.2', 80)) shut down
+[10/May/2016:03:54:53] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:03:54:53] ENGINE Bus STOPPED
+[10/May/2016:03:54:53] ENGINE Bus EXITING
+[10/May/2016:03:54:53] ENGINE Bus EXITED
+[10/May/2016:03:54:53] ENGINE Waiting for child threads to terminate...
+[10/May/2016:03:55:03] ENGINE Listening for SIGHUP.
+[10/May/2016:03:55:03] ENGINE Listening for SIGTERM.
+[10/May/2016:03:55:03] ENGINE Listening for SIGUSR1.
+[10/May/2016:03:55:03] ENGINE Bus STARTING
+[10/May/2016:03:55:03] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:03:55:03] ENGINE Serving on http://10.140.0.2
+[10/May/2016:03:55:03] ENGINE Bus STARTED
+[10/May/2016:04:11:35] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 678, in respond
+    inst.set_response()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cperror.py", line 401, in set_response
+    message=self._message)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cperror.py", line 407, in get_error_page
+    return get_error_page(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cperror.py", line 535, in get_error_page
+    return result.encode('utf-8')
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 543: ordinal not in range(128)
+[10/May/2016:16:03:34] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:16:03:34] ENGINE Bus STOPPING
+[10/May/2016:16:03:34] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.2', 80)) shut down
+[10/May/2016:16:03:34] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:16:03:34] ENGINE Bus STOPPED
+[10/May/2016:16:03:34] ENGINE Bus EXITING
+[10/May/2016:16:03:34] ENGINE Bus EXITED
+[10/May/2016:16:03:34] ENGINE Waiting for child threads to terminate...
