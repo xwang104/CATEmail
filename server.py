@@ -191,7 +191,7 @@ class CATEmail(object):
     print (email)
     # check if user exists
     db = MongoClient().catemail
-    existUser = db.threads.find_one('email':email})
+    existUser = db.threads.find_one({'email':email})
     if not existUser:
       # start a thread to crawl user emails
       thread = Thread(target = self.analyze, args = (gmail, email, ))
