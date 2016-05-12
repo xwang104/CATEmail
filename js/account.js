@@ -1,21 +1,4 @@
-function postData(url, data) {
-  $.ajax({
-    headers: { 
-    'Accept': 'application/json',
-    'Content-Type': 'application/json' 
-    },
-    type: 'POST',
-    url: url,
-    data: JSON.stringify(data),
-    dataType: 'json',
-    error: function() {
-      alert("POST error: \n" + url + "\n" + stringify(data));
-    },
-    success: function(data) {
-      console.log("POST success: " + url + "\n" + data);
-    }
-  });  
-}
+email = undefined;
 
 function onSignIn(googleUser) {
   // Useful data for your client-side scripts:
@@ -26,12 +9,7 @@ function onSignIn(googleUser) {
   console.log('Family Name: ' + profile.getFamilyName());
   console.log("Image URL: " + profile.getImageUrl());
   console.log("Email: " + profile.getEmail());
-
-  // The ID token you need to pass to your backend:
-  var id_token = googleUser.getAuthResponse().id_token;
-  console.log("ID Token: " + id_token);
-
-  postData('token', {'token': id_token});
+  email = profile.getEmail()
 };
 
 function signOut(){
