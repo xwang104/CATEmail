@@ -1572,3 +1572,665 @@ ChannelFailures: IOError("Port 80 not free on '10.140.0.3'",)
 [12/May/2016:03:34:37] ENGINE Started monitor thread '_TimeoutMonitor'.
 [12/May/2016:03:34:37] ENGINE Serving on http://10.140.0.3
 [12/May/2016:03:34:37] ENGINE Bus STARTED
+[12/May/2016:21:53:14] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:21:53:14] ENGINE Bus STOPPING
+[12/May/2016:21:53:14] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:21:53:14] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:21:53:14] ENGINE Bus STOPPED
+[12/May/2016:21:53:14] ENGINE Bus EXITING
+[12/May/2016:21:53:14] ENGINE Bus EXITED
+[12/May/2016:21:53:14] ENGINE Waiting for child threads to terminate...
+[12/May/2016:21:53:40] ENGINE Listening for SIGHUP.
+[12/May/2016:21:53:40] ENGINE Listening for SIGTERM.
+[12/May/2016:21:53:40] ENGINE Listening for SIGUSR1.
+[12/May/2016:21:53:40] ENGINE Bus STARTING
+[12/May/2016:21:53:40] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:21:53:40] ENGINE Serving on http://10.140.0.3
+[12/May/2016:21:53:40] ENGINE Bus STARTED
+[12/May/2016:21:59:51] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 181, in crawler_status
+    email = cherrypy.request.json['email']
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/__init__.py", line 233, in __getattr__
+    return getattr(child, name)
+AttributeError: 'Request' object has no attribute 'json'
+[12/May/2016:22:03:58] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:03:58] ENGINE Bus STOPPING
+[12/May/2016:22:03:58] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:03:58] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:03:58] ENGINE Bus STOPPED
+[12/May/2016:22:03:58] ENGINE Bus EXITING
+[12/May/2016:22:03:58] ENGINE Bus EXITED
+[12/May/2016:22:03:58] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:04:00] ENGINE Listening for SIGHUP.
+[12/May/2016:22:04:00] ENGINE Listening for SIGTERM.
+[12/May/2016:22:04:00] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:04:00] ENGINE Bus STARTING
+[12/May/2016:22:04:00] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:04:00] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:04:00] ENGINE Bus STARTED
+[12/May/2016:22:04:09] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 647, in respond
+    self.namespaces(self.config)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/reprconf.py", line 117, in __call__
+    exit(None, None, None)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cptools.py", line 460, in __exit__
+    tool = getattr(self, name)
+AttributeError: 'Toolbox' object has no attribute 'CORS'
+[12/May/2016:22:05:44] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:05:44] ENGINE Bus STOPPING
+[12/May/2016:22:05:44] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:05:44] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:05:44] ENGINE Bus STOPPED
+[12/May/2016:22:05:44] ENGINE Bus EXITING
+[12/May/2016:22:05:44] ENGINE Bus EXITED
+[12/May/2016:22:05:44] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:06:32] ENGINE Listening for SIGHUP.
+[12/May/2016:22:06:32] ENGINE Listening for SIGTERM.
+[12/May/2016:22:06:32] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:06:32] ENGINE Bus STARTING
+[12/May/2016:22:06:32] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:06:32] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:06:32] ENGINE Bus STARTED
+[12/May/2016:22:06:39] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 647, in respond
+    self.namespaces(self.config)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/reprconf.py", line 117, in __call__
+    exit(None, None, None)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cptools.py", line 460, in __exit__
+    tool = getattr(self, name)
+AttributeError: 'Toolbox' object has no attribute 'CORS'
+[12/May/2016:22:07:30] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:07:30] ENGINE Bus STOPPING
+[12/May/2016:22:07:30] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:07:30] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:07:30] ENGINE Bus STOPPED
+[12/May/2016:22:07:30] ENGINE Bus EXITING
+[12/May/2016:22:07:30] ENGINE Bus EXITED
+[12/May/2016:22:07:30] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:07:32] ENGINE Listening for SIGHUP.
+[12/May/2016:22:07:32] ENGINE Listening for SIGTERM.
+[12/May/2016:22:07:32] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:07:32] ENGINE Bus STARTING
+[12/May/2016:22:07:32] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:07:32] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:07:32] ENGINE Bus STARTED
+[12/May/2016:22:07:42] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 182, in crawler_status
+    email = cherrypy.request.json['email']
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/__init__.py", line 233, in __getattr__
+    return getattr(child, name)
+AttributeError: 'Request' object has no attribute 'json'
+[12/May/2016:22:08:56] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:08:56] ENGINE Bus STOPPING
+[12/May/2016:22:08:56] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:08:56] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:08:56] ENGINE Bus STOPPED
+[12/May/2016:22:08:56] ENGINE Bus EXITING
+[12/May/2016:22:08:56] ENGINE Bus EXITED
+[12/May/2016:22:08:56] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:08:58] ENGINE Listening for SIGHUP.
+[12/May/2016:22:08:58] ENGINE Listening for SIGTERM.
+[12/May/2016:22:08:58] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:08:58] ENGINE Bus STARTING
+[12/May/2016:22:08:58] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:08:58] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:08:58] ENGINE Bus STARTED
+[12/May/2016:22:09:05] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 182, in crawler_status
+    print cherrypy.request.keys()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/__init__.py", line 233, in __getattr__
+    return getattr(child, name)
+AttributeError: 'Request' object has no attribute 'keys'
+[12/May/2016:22:09:40] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:09:40] ENGINE Bus STOPPING
+[12/May/2016:22:09:40] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:09:40] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:09:40] ENGINE Bus STOPPED
+[12/May/2016:22:09:40] ENGINE Bus EXITING
+[12/May/2016:22:09:40] ENGINE Bus EXITED
+[12/May/2016:22:09:40] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:09:41] ENGINE Listening for SIGHUP.
+[12/May/2016:22:09:41] ENGINE Listening for SIGTERM.
+[12/May/2016:22:09:41] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:09:41] ENGINE Bus STARTING
+[12/May/2016:22:09:41] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:09:41] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:09:41] ENGINE Bus STARTED
+[12/May/2016:22:09:46] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 183, in crawler_status
+    email = cherrypy.request.json['email']
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/__init__.py", line 233, in __getattr__
+    return getattr(child, name)
+AttributeError: 'Request' object has no attribute 'json'
+[12/May/2016:22:11:26] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:11:26] ENGINE Bus STOPPING
+[12/May/2016:22:11:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:11:26] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:11:26] ENGINE Bus STOPPED
+[12/May/2016:22:11:26] ENGINE Bus EXITING
+[12/May/2016:22:11:26] ENGINE Bus EXITED
+[12/May/2016:22:11:26] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:11:28] ENGINE Listening for SIGHUP.
+[12/May/2016:22:11:28] ENGINE Listening for SIGTERM.
+[12/May/2016:22:11:28] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:11:28] ENGINE Bus STARTING
+[12/May/2016:22:11:28] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:11:28] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:11:28] ENGINE Bus STARTED
+[12/May/2016:22:11:37] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 182, in crawler_status
+    print cherrypy.request.email
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/__init__.py", line 233, in __getattr__
+    return getattr(child, name)
+AttributeError: 'Request' object has no attribute 'email'
+[12/May/2016:22:12:13] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:12:13] ENGINE Bus STOPPING
+[12/May/2016:22:12:13] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:12:13] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:12:13] ENGINE Bus STOPPED
+[12/May/2016:22:12:13] ENGINE Bus EXITING
+[12/May/2016:22:12:13] ENGINE Bus EXITED
+[12/May/2016:22:12:13] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:12:15] ENGINE Listening for SIGHUP.
+[12/May/2016:22:12:15] ENGINE Listening for SIGTERM.
+[12/May/2016:22:12:15] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:12:15] ENGINE Bus STARTING
+[12/May/2016:22:12:15] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:12:15] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:12:15] ENGINE Bus STARTED
+[12/May/2016:22:12:20] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 183, in crawler_status
+    email = cherrypy.request.json['email']
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/__init__.py", line 233, in __getattr__
+    return getattr(child, name)
+AttributeError: 'Request' object has no attribute 'json'
+[12/May/2016:22:14:43] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 183, in crawler_status
+    email = cherrypy.request.json['email']
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/__init__.py", line 233, in __getattr__
+    return getattr(child, name)
+AttributeError: 'Request' object has no attribute 'json'
+[12/May/2016:22:14:52] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:14:52] ENGINE Bus STOPPING
+[12/May/2016:22:14:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:14:53] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:14:53] ENGINE Bus STOPPED
+[12/May/2016:22:14:53] ENGINE Bus EXITING
+[12/May/2016:22:14:53] ENGINE Bus EXITED
+[12/May/2016:22:14:53] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:15:02] ENGINE Listening for SIGHUP.
+[12/May/2016:22:15:02] ENGINE Listening for SIGTERM.
+[12/May/2016:22:15:02] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:15:02] ENGINE Bus STARTING
+[12/May/2016:22:15:02] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:15:02] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:15:02] ENGINE Bus STARTED
+[12/May/2016:22:15:15] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 182, in crawler_status
+    email = cherrypy.request.json['email']
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/__init__.py", line 233, in __getattr__
+    return getattr(child, name)
+AttributeError: 'Request' object has no attribute 'json'
+[12/May/2016:22:15:39] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:15:39] ENGINE Bus STOPPING
+[12/May/2016:22:15:39] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:15:39] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:15:39] ENGINE Bus STOPPED
+[12/May/2016:22:15:39] ENGINE Bus EXITING
+[12/May/2016:22:15:39] ENGINE Bus EXITED
+[12/May/2016:22:15:39] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:15:41] ENGINE Listening for SIGHUP.
+[12/May/2016:22:15:41] ENGINE Listening for SIGTERM.
+[12/May/2016:22:15:41] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:15:41] ENGINE Bus STARTING
+[12/May/2016:22:15:41] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:15:41] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:15:41] ENGINE Bus STARTED
+[12/May/2016:22:15:46] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 182, in crawler_status
+    print cerrypy.request.method
+NameError: global name 'cerrypy' is not defined
+[12/May/2016:22:15:59] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:15:59] ENGINE Bus STOPPING
+[12/May/2016:22:15:59] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:15:59] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:15:59] ENGINE Bus STOPPED
+[12/May/2016:22:15:59] ENGINE Bus EXITING
+[12/May/2016:22:15:59] ENGINE Bus EXITED
+[12/May/2016:22:15:59] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:16:00] ENGINE Listening for SIGHUP.
+[12/May/2016:22:16:00] ENGINE Listening for SIGTERM.
+[12/May/2016:22:16:00] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:16:00] ENGINE Bus STARTING
+[12/May/2016:22:16:00] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:16:00] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:16:00] ENGINE Bus STARTED
+[12/May/2016:22:16:05] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 183, in crawler_status
+    email = cherrypy.request.json['email']
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/__init__.py", line 233, in __getattr__
+    return getattr(child, name)
+AttributeError: 'Request' object has no attribute 'json'
+[12/May/2016:22:22:41] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:22:41] ENGINE Bus STOPPING
+[12/May/2016:22:22:41] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:22:41] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:22:41] ENGINE Bus STOPPED
+[12/May/2016:22:22:41] ENGINE Bus EXITING
+[12/May/2016:22:22:41] ENGINE Bus EXITED
+[12/May/2016:22:22:41] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:22:43] ENGINE Listening for SIGHUP.
+[12/May/2016:22:22:43] ENGINE Listening for SIGTERM.
+[12/May/2016:22:22:43] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:22:43] ENGINE Bus STARTING
+[12/May/2016:22:22:43] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:22:43] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:22:43] ENGINE Bus STARTED
+[12/May/2016:22:30:24] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:22:30:24] ENGINE Bus STOPPING
+[12/May/2016:22:30:24] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:22:30:24] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:22:30:24] ENGINE Bus STOPPED
+[12/May/2016:22:30:24] ENGINE Bus EXITING
+[12/May/2016:22:30:24] ENGINE Bus EXITED
+[12/May/2016:22:30:24] ENGINE Waiting for child threads to terminate...
+[12/May/2016:22:30:25] ENGINE Listening for SIGHUP.
+[12/May/2016:22:30:25] ENGINE Listening for SIGTERM.
+[12/May/2016:22:30:25] ENGINE Listening for SIGUSR1.
+[12/May/2016:22:30:25] ENGINE Bus STARTING
+[12/May/2016:22:30:25] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:22:30:26] ENGINE Serving on http://10.140.0.3
+[12/May/2016:22:30:26] ENGINE Bus STARTED
+[12/May/2016:23:11:06] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:11:06] ENGINE Bus STOPPING
+[12/May/2016:23:11:06] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:11:06] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:11:06] ENGINE Bus STOPPED
+[12/May/2016:23:11:06] ENGINE Bus EXITING
+[12/May/2016:23:11:06] ENGINE Bus EXITED
+[12/May/2016:23:11:06] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:11:09] ENGINE Listening for SIGHUP.
+[12/May/2016:23:11:09] ENGINE Listening for SIGTERM.
+[12/May/2016:23:11:09] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:11:09] ENGINE Bus STARTING
+[12/May/2016:23:11:09] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:11:09] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:11:09] ENGINE Bus STARTED
+[12/May/2016:23:13:50] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:13:50] ENGINE Bus STOPPING
+[12/May/2016:23:13:50] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:13:50] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:13:50] ENGINE Bus STOPPED
+[12/May/2016:23:13:50] ENGINE Bus EXITING
+[12/May/2016:23:13:50] ENGINE Bus EXITED
+[12/May/2016:23:13:50] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:13:51] ENGINE Listening for SIGHUP.
+[12/May/2016:23:13:51] ENGINE Listening for SIGTERM.
+[12/May/2016:23:13:51] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:13:51] ENGINE Bus STARTING
+[12/May/2016:23:13:51] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:13:52] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:13:52] ENGINE Bus STARTED
+[12/May/2016:23:18:47] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:18:47] ENGINE Bus STOPPING
+[12/May/2016:23:18:47] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:18:47] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:18:47] ENGINE Bus STOPPED
+[12/May/2016:23:18:47] ENGINE Bus EXITING
+[12/May/2016:23:18:47] ENGINE Bus EXITED
+[12/May/2016:23:18:47] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:18:49] ENGINE Listening for SIGHUP.
+[12/May/2016:23:18:49] ENGINE Listening for SIGTERM.
+[12/May/2016:23:18:49] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:18:49] ENGINE Bus STARTING
+[12/May/2016:23:18:49] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:18:49] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:18:49] ENGINE Bus STARTED
+[12/May/2016:23:21:50] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:21:50] ENGINE Bus STOPPING
+[12/May/2016:23:21:50] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:21:50] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:21:50] ENGINE Bus STOPPED
+[12/May/2016:23:21:50] ENGINE Bus EXITING
+[12/May/2016:23:21:50] ENGINE Bus EXITED
+[12/May/2016:23:21:50] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:21:58] ENGINE Listening for SIGHUP.
+[12/May/2016:23:21:58] ENGINE Listening for SIGTERM.
+[12/May/2016:23:21:58] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:21:58] ENGINE Bus STARTING
+[12/May/2016:23:21:58] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:21:58] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:21:58] ENGINE Bus STARTED
+[12/May/2016:23:24:50] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:24:50] ENGINE Bus STOPPING
+[12/May/2016:23:24:50] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:24:50] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:24:50] ENGINE Bus STOPPED
+[12/May/2016:23:24:50] ENGINE Bus EXITING
+[12/May/2016:23:24:50] ENGINE Bus EXITED
+[12/May/2016:23:24:50] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:25:16] ENGINE Listening for SIGHUP.
+[12/May/2016:23:25:16] ENGINE Listening for SIGTERM.
+[12/May/2016:23:25:16] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:25:16] ENGINE Bus STARTING
+[12/May/2016:23:25:16] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:25:16] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:25:16] ENGINE Bus STARTED
+[12/May/2016:23:29:12] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:29:12] ENGINE Bus STOPPING
+[12/May/2016:23:29:12] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:29:12] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:29:12] ENGINE Bus STOPPED
+[12/May/2016:23:29:12] ENGINE Bus EXITING
+[12/May/2016:23:29:12] ENGINE Bus EXITED
+[12/May/2016:23:29:12] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:29:18] ENGINE Listening for SIGHUP.
+[12/May/2016:23:29:18] ENGINE Listening for SIGTERM.
+[12/May/2016:23:29:18] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:29:18] ENGINE Bus STARTING
+[12/May/2016:23:29:18] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:29:18] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:29:18] ENGINE Bus STARTED
+[12/May/2016:23:31:40] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:31:40] ENGINE Bus STOPPING
+[12/May/2016:23:31:40] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:31:40] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:31:40] ENGINE Bus STOPPED
+[12/May/2016:23:31:40] ENGINE Bus EXITING
+[12/May/2016:23:31:40] ENGINE Bus EXITED
+[12/May/2016:23:31:40] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:31:43] ENGINE Listening for SIGHUP.
+[12/May/2016:23:31:43] ENGINE Listening for SIGTERM.
+[12/May/2016:23:31:43] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:31:43] ENGINE Bus STARTING
+[12/May/2016:23:31:43] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:31:44] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:31:44] ENGINE Bus STARTED
+[12/May/2016:23:31:48] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:31:48] ENGINE Bus STOPPING
+[12/May/2016:23:31:48] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:31:48] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:31:48] ENGINE Bus STOPPED
+[12/May/2016:23:31:48] ENGINE Bus EXITING
+[12/May/2016:23:31:48] ENGINE Bus EXITED
+[12/May/2016:23:31:48] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:31:50] ENGINE Listening for SIGHUP.
+[12/May/2016:23:31:50] ENGINE Listening for SIGTERM.
+[12/May/2016:23:31:50] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:31:50] ENGINE Bus STARTING
+[12/May/2016:23:31:50] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:31:50] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:31:50] ENGINE Bus STARTED
+[12/May/2016:23:40:56] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:40:56] ENGINE Bus STOPPING
+[12/May/2016:23:40:56] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:40:56] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:40:56] ENGINE Bus STOPPED
+[12/May/2016:23:40:56] ENGINE Bus EXITING
+[12/May/2016:23:40:56] ENGINE Bus EXITED
+[12/May/2016:23:40:56] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:40:58] ENGINE Listening for SIGHUP.
+[12/May/2016:23:40:58] ENGINE Listening for SIGTERM.
+[12/May/2016:23:40:58] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:40:58] ENGINE Bus STARTING
+[12/May/2016:23:40:58] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:40:58] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:40:58] ENGINE Bus STARTED
+[12/May/2016:23:53:37] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:53:37] ENGINE Bus STOPPING
+[12/May/2016:23:53:37] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:53:37] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:53:37] ENGINE Bus STOPPED
+[12/May/2016:23:53:37] ENGINE Bus EXITING
+[12/May/2016:23:53:37] ENGINE Bus EXITED
+[12/May/2016:23:53:37] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:53:39] ENGINE Listening for SIGHUP.
+[12/May/2016:23:53:39] ENGINE Listening for SIGTERM.
+[12/May/2016:23:53:39] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:53:39] ENGINE Bus STARTING
+[12/May/2016:23:53:39] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:53:40] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:53:40] ENGINE Bus STARTED
+[12/May/2016:23:57:01] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:57:01] ENGINE Bus STOPPING
+[12/May/2016:23:57:01] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:57:01] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:57:01] ENGINE Bus STOPPED
+[12/May/2016:23:57:01] ENGINE Bus EXITING
+[12/May/2016:23:57:01] ENGINE Bus EXITED
+[12/May/2016:23:57:01] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:57:06] ENGINE Listening for SIGHUP.
+[12/May/2016:23:57:06] ENGINE Listening for SIGTERM.
+[12/May/2016:23:57:06] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:57:06] ENGINE Bus STARTING
+[12/May/2016:23:57:06] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:57:06] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:57:06] ENGINE Bus STARTED
+[12/May/2016:23:58:10] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:58:10] ENGINE Bus STOPPING
+[12/May/2016:23:58:15] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:58:15] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:58:15] ENGINE Bus STOPPED
+[12/May/2016:23:58:15] ENGINE Bus EXITING
+[12/May/2016:23:58:15] ENGINE Bus EXITED
+[12/May/2016:23:58:15] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:58:15] ENGINE Waiting for thread CP Server Thread-7.
+[12/May/2016:23:58:20] ENGINE Listening for SIGHUP.
+[12/May/2016:23:58:20] ENGINE Listening for SIGTERM.
+[12/May/2016:23:58:20] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:58:20] ENGINE Bus STARTING
+[12/May/2016:23:58:20] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:58:20] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:58:20] ENGINE Bus STARTED
+[12/May/2016:23:58:54] ENGINE Keyboard Interrupt: shutting down bus
+[12/May/2016:23:58:54] ENGINE Bus STOPPING
+[12/May/2016:23:58:54] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[12/May/2016:23:58:54] ENGINE Stopped thread '_TimeoutMonitor'.
+[12/May/2016:23:58:54] ENGINE Bus STOPPED
+[12/May/2016:23:58:54] ENGINE Bus EXITING
+[12/May/2016:23:58:54] ENGINE Bus EXITED
+[12/May/2016:23:58:54] ENGINE Waiting for child threads to terminate...
+[12/May/2016:23:58:55] ENGINE Listening for SIGHUP.
+[12/May/2016:23:58:55] ENGINE Listening for SIGTERM.
+[12/May/2016:23:58:55] ENGINE Listening for SIGUSR1.
+[12/May/2016:23:58:55] ENGINE Bus STARTING
+[12/May/2016:23:58:55] ENGINE Started monitor thread '_TimeoutMonitor'.
+[12/May/2016:23:58:55] ENGINE Serving on http://10.140.0.3
+[12/May/2016:23:58:55] ENGINE Bus STARTED
+[12/May/2016:23:58:58] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 234, in get_promotions
+    res = collections.find(query).sort(['timestamp', -1]).limit(100)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 658, in sort
+    self.__ordering = helpers._index_document(keys)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/helpers.py", line 78, in _index_document
+    for (key, value) in index_list:
+ValueError: too many values to unpack
+[12/May/2016:23:59:30] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 232, in get_promotions
+    products = products.split('_')
+AttributeError: 'NoneType' object has no attribute 'split'
+[13/May/2016:00:00:59] ENGINE Keyboard Interrupt: shutting down bus
+[13/May/2016:00:00:59] ENGINE Bus STOPPING
+[13/May/2016:00:00:59] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[13/May/2016:00:00:59] ENGINE Stopped thread '_TimeoutMonitor'.
+[13/May/2016:00:00:59] ENGINE Bus STOPPED
+[13/May/2016:00:00:59] ENGINE Bus EXITING
+[13/May/2016:00:00:59] ENGINE Bus EXITED
+[13/May/2016:00:00:59] ENGINE Waiting for child threads to terminate...
+[13/May/2016:00:01:00] ENGINE Listening for SIGHUP.
+[13/May/2016:00:01:00] ENGINE Listening for SIGTERM.
+[13/May/2016:00:01:00] ENGINE Listening for SIGUSR1.
+[13/May/2016:00:01:00] ENGINE Bus STARTING
+[13/May/2016:00:01:00] ENGINE Started monitor thread '_TimeoutMonitor'.
+[13/May/2016:00:01:00] ENGINE Serving on http://10.140.0.3
+[13/May/2016:00:01:00] ENGINE Bus STARTED
+[13/May/2016:00:01:10] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 235, in get_promotions
+    res = collections.find(query).sort(['timestamp', -1]).limit(100)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 658, in sort
+    self.__ordering = helpers._index_document(keys)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/helpers.py", line 78, in _index_document
+    for (key, value) in index_list:
+ValueError: too many values to unpack
+[13/May/2016:01:28:25] ENGINE Keyboard Interrupt: shutting down bus
+[13/May/2016:01:28:25] ENGINE Bus STOPPING
+[13/May/2016:01:28:25] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[13/May/2016:01:28:25] ENGINE Stopped thread '_TimeoutMonitor'.
+[13/May/2016:01:28:25] ENGINE Bus STOPPED
+[13/May/2016:01:28:25] ENGINE Bus EXITING
+[13/May/2016:01:28:25] ENGINE Bus EXITED
+[13/May/2016:01:28:25] ENGINE Waiting for child threads to terminate...
+[13/May/2016:01:28:26] ENGINE Listening for SIGHUP.
+[13/May/2016:01:28:26] ENGINE Listening for SIGTERM.
+[13/May/2016:01:28:26] ENGINE Listening for SIGUSR1.
+[13/May/2016:01:28:26] ENGINE Bus STARTING
+[13/May/2016:01:28:26] ENGINE Started monitor thread '_TimeoutMonitor'.
+[13/May/2016:01:28:26] ENGINE Serving on http://10.140.0.3
+[13/May/2016:01:28:26] ENGINE Bus STARTED
+[13/May/2016:01:28:31] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 239, in get_promotions
+    return json.dumps({'status': 'OK', 'data': ret})
+  File "/usr/lib/python2.7/json/__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python2.7/json/encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python2.7/json/encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: ObjectId('573517d29a812c1263bf94c5') is not JSON serializable
+[13/May/2016:01:32:39] ENGINE Keyboard Interrupt: shutting down bus
+[13/May/2016:01:32:39] ENGINE Bus STOPPING
+[13/May/2016:01:32:39] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('10.140.0.3', 80)) shut down
+[13/May/2016:01:32:39] ENGINE Stopped thread '_TimeoutMonitor'.
+[13/May/2016:01:32:39] ENGINE Bus STOPPED
+[13/May/2016:01:32:39] ENGINE Bus EXITING
+[13/May/2016:01:32:39] ENGINE Bus EXITED
+[13/May/2016:01:32:39] ENGINE Waiting for child threads to terminate...
+[13/May/2016:01:32:41] ENGINE Listening for SIGHUP.
+[13/May/2016:01:32:41] ENGINE Listening for SIGTERM.
+[13/May/2016:01:32:41] ENGINE Listening for SIGUSR1.
+[13/May/2016:01:32:41] ENGINE Bus STARTING
+[13/May/2016:01:32:41] ENGINE Started monitor thread '_TimeoutMonitor'.
+[13/May/2016:01:32:41] ENGINE Serving on http://10.140.0.3
+[13/May/2016:01:32:41] ENGINE Bus STARTED

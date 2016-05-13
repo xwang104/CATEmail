@@ -1,5 +1,6 @@
 import time
 import cherrypy
+import cherrypy_cors
 import base64
 import os.path
 import requests
@@ -41,7 +42,6 @@ class CATEmail(object):
       print 'email is ', email
       maxTime = collection.find_one({'email': email}, sort=[("timestamp", -1)])
       if maxTime:
-        print 'first maxTime', maxTime
         maxTime = int(maxTime["timestamp"])
         maxTime =int( max(maxTime, 1000 * (time.time() - 24*3600)))
       else:
@@ -130,10 +130,15 @@ class CATEmail(object):
         # after you setup the classifier, use it to calculate the category here
         self.save(collection, email, sender, timestamp, subject, body, category, products);
       #break
-      time.sleep(3600)
+      time.sleep(30)
+
+      # check if the thread should continue
+      user = db.threads.find_one({'email':email})
+      if user['status'] != 'running':
+        db.threads.replace_one({'email':email}, {'email':email, 'status':'stopped'})
+        break;
 
     print "done analyzing"
-    return 'OK'
 
   def save(self, collection, email, sender, timestamp, subject, body, category, products):
     doc = {'email': email,
@@ -170,9 +175,21 @@ class CATEmail(object):
 
 
   @cherrypy.expose
-  def category(self, cate = None):
-    # process cate
-    return "category"
+  def crawler_status(self, email = None):
+    db = MongoClient().catemail
+    if db.threads.find_one({'email':email, 'status': 'running'}):
+      return json.dumps({'status': 'running'});
+    else:
+      return json.dumps({'status': 'stopped'});
+
+  @cherrypy.expose
+  def stop_crawler(self, email = None):
+    db = MongoClient().catemail
+    user = db.threads.find_one({'email':email, 'status': 'running'})
+    print 'stopping crawler for ', email, user
+    if user:
+      db.threads.replace_one({'email':email}, {'email':email, 'status':'stopping'})
+    return 'OK'
 
   @cherrypy.expose
   def oauth2callback(self, code = None):
@@ -191,34 +208,41 @@ class CATEmail(object):
     print (email)
     # check if user exists
     db = MongoClient().catemail
-    existUser = db.threads.find_one({'email':email})
-    if not existUser:
+    user = db.threads.find_one({'email':email})
+    data = {'email':email, 'status': 'running'}
+    if not user or user['status'] == 'stopped':
       # start a thread to crawl user emails
       thread = Thread(target = self.analyze, args = (gmail, email, ))
       thread.daemon = True
       thread.start()
-      db.threads.save({'email':email})
-    raise cherrypy.HTTPRedirect("http://www.catemail.tk")
-    #return 'OK'
-    #return file('html/index.html')
+      if not user:
+        db.threads.insert_one(data)
+      else:
+        db.threads.replace_one({'email':email}, data)
+    elif user['status'] == 'stopping':
+      db.threads.replace_one({'email':email}, data)
+    raise cherrypy.HTTPRedirect("http://www.promotiondigest.tk:3000")
+    #raise cherrypy.HTTPRedirect("http://www.catemail.tk")
 
 
-    @cherrypy.expose
-    @cherrypy.tools.json_out()
-    @cherrypy.tools.json_in()
-    def token(self):
-      query = cherrypy.request.json.query
-      db = MongoClient().catemail
-      collections = db.messages
-      res = collections.find(query).sort(['timestamp', -1]).limit(100)
-      ret = []
-      for doc in res:
-        ret.append(doc)
-      return {'status': 'OK', data: ret}
+  @cherrypy.expose
+  def get_promotions(self, category = None, products = None):
+    print category, products
+    db = MongoClient().catemail
+    collections = db.messages
+    products = products.split('_')
+    query = {'category': category, 'products': {'$in': products}}
+    res = collections.find(query).sort('timestamp', -1).limit(100)
+    ret = []
+    for doc in res:
+      doc.pop('_id', None)
+      ret.append(doc)
+    return json.dumps({'status': 'OK', 'data': ret})
 
 
 
 if __name__ == '__main__':
+  cherrypy_cors.install()
   import sys  
   reload(sys)  
   sys.setdefaultencoding('utf8')
@@ -230,6 +254,7 @@ if __name__ == '__main__':
   #cherrypy.config.update('config')
   cherrypy.config.update({'environment': 'production',
                           'log.error_file': 'site.log',
+                          'cors.expose.on': True,
                           'log.screen': True,
                           'tools.proxy.on': True,
                           'tools.proxy.local': 'X-Forwarded-Host'})
