@@ -46,6 +46,7 @@ class CATEmail(object):
         maxTime =int( max(maxTime, 1000 * (time.time() - 24*3600)))
       else:
         maxTime = 1000 * (int(time.time()) - 24*3600)
+      maxTime += 1
       print 'before query: ', maxTime
       q = "category:promotions after:%d"%(maxTime/1000)
       response = gmail.users().messages().list(userId = userId, 
